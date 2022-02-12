@@ -1,0 +1,32 @@
+//https://www.codechef.com/FEB222C/problems/NOFIX
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        int A[n];
+        for(int i=1;i<=n;i++)
+        {
+            cin>>A[i];
+        }
+        int el_inserted=0;
+//here el_inserted is playing the role of imaginarily increasing the index of elements supposing that some
+//elements have been inserted previously
+        for(int i=1;i<=n;i++)
+        {
+            int v=i+el_inserted;
+            if(v==A[i])
+            el_inserted++;
+        }
+        cout<<el_inserted<<endl;
+    }
+    return 0;
+}
