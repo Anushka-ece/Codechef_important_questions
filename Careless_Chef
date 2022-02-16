@@ -1,0 +1,28 @@
+//https://www.codechef.com/START26C/problems/LOSTSEQ
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int N;
+        cin>>N;
+        int A[2*N];
+        int sum=0;
+        for(int i=1;i<=2*N;i++)
+        {
+            cin>>A[i];
+            sum+=A[i];
+        }
+        if(sum%2==0)
+        cout<<"YES"<<endl;
+        else
+        cout<<"NO"<<endl;
+    }
+    return 0;
+}
